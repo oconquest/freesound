@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EXIMO</title>
-        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=MuseoModerno:wght@300&family=Orbitron&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-  
+        <title>Vergo</title>
+        
+ <meta name="viewport" content="width=device-width">   
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=MuseoModerno:wght@300&family=Orbitron&display=swap" rel="stylesheet">    
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+ 
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+
+
+<link href="https://fonts.googleapis.com/css2?family=Changa&family=Fondamento&display=swap" rel="stylesheet">
+
+
 <style>
     
 body {
-width:97vw;  
-height:1000vh;  
+
+width:97vw;
+
+height:10000vh;
+
 background-color:white;
 
+right:0vw;
+    
 }
 
 .unselectable {
@@ -24,355 +40,1618 @@ background-color:white;
 }   
 
 
-#header{
-width:100%; 
-position:absolute;   
-left:0%;  
-top:0%;
-height:15%;  
+/* sidebar button ************************** */
 
-background-color:#fdcd3b;
+.menu-bar-lines{
 
-}
+position:fixed;
 
-#dot1{
+background-color:#dcdcdc; 
 
-width:7%;    
-height:1%;    
-position:absolute;  
-top:5%; 
-left:10%; 
-background-color:white;
-border-radius:10%;
+width:1.5em;
+
+height:0.25em;
+
+left:1em;   
+    
 }
 
 
-#dot2{
 
-width:5%;    
-height:1%;    
-position:absolute;  
-top:7%; 
-left:8%; 
-background-color:white;
-border-radius:10%;
+
+
+
+#line-one{
+
+top:1em;   
+    
 }
 
-#dot3{
+#line-two{
 
-width:3%;    
-height:1%;    
-position:absolute;  
-top:9%; 
-left:10%; 
-background-color:white;
-border-radius:10%;
+top:1.5em;   
+    
 }
 
-#zvue{
-position:absolute;    
-top:4%;
-left:16%;    
-color:white;
+#line-three{
+
+top:2em;   
+    
+}
+
+/* end of sidebar button ******************* */
+
+
+
+
+/* name and logo of app %%%%%%%%%%%%%%%%%%%% */
+
+#app-name{
+    
+position:fixed;    
+
 font-family: 'Orbitron', sans-serif;
-font-weight:bold;
-}
 
+font-size:1.2em;
 
-#cordimg{
-width:9%;    
-height:6%;    
-position:absolute; 
-left:50%; 
-top:5%;  
-}
+left:35vw;
 
-#aboutimg{
-    
-width:9%;    
-height:6%;    
-position:absolute; 
-left:75%; 
-top:5%;      
+top:0.8em;
+
+color:#dcdcdc;
     
 }
 
 
+#app-logo{
 
-#dot4{
+position:fixed;
 
-width:30%;    
-height:1%;    
-position:absolute;  
-top:38%; 
-left:5%; 
-background-color:#fdcd3b;
-border-radius:10%;
+width:2em;   
+
+height:2em; 
+
+left:55vmin;
+
+top:0.8em;
+    
+    
 }
 
+@media only screen and (min-width: 600px) {
 
+#app-name{
 
-#dot5{
-
-width:30%;    
-height:1%;    
-position:absolute;  
-top:93%; 
-left:5%; 
-background-color:#fdcd3b;
-border-radius:10%;
+left:40vw;    
+    
 }
 
-#main{
+#app-logo{
 
+position:fixed;
+
+width:2em;   
+
+height:2em; 
+
+left:50vmax;
+
+top:0.8em;
     
     
 }
 
 
+}
+
+/* end of name and logo of app */
 
 
 
+/* beginning of header boundary %%%%%%%%%%%*/
 
+#header-mark-end{
 
-
-
-
-
-
-
-
-#audBox{
-
-width:90%;      
 position:fixed; 
-left:5%; 
-top:40%;  
+
+width:102vw;
+
+height:0.1em;
+
+background-color:grey;
+
+top:25vh;
+
+left:0em;
+   
+    
 }
 
 
 
+@media only screen and (min-width: 600px) {
+
+#header-mark-end{
+
+position:fixed; 
+
+width:102vw;
+
+height:0.1em;
+
+background-color:grey;
+
+top:40vh;
+
+left:0em;
+   
+    
+}
+
+
+
+}
+
+
+/* end of header boundary %%%%%%%%%%%%%%%%%*/
+
+
+/* beginning of hidden icons %%%%%%%%%%%%%%*/
+
+#discord-icon{
+
+width:2em; 
+
+height:2em;
+
+position:fixed;   
+
+left:1em;
+
+top:1em;
     
     
-</style>  
-      
+}
+
+
+#info-button{
+
+width:2em; 
+
+height:2em;
+
+position:fixed;   
+
+right:1em;
+
+top:1em;
+    
+    
+}
+
+
+/* end of hidden icons %%%%%%%%%%%%%%%%%%%%*/
+
+
+
+
+
+
+/* beginning of genre lines and text %%%%%%%*/
+
+
+.genre-lines{
+    
+width:25vw; 
+
+height:0.3em; 
+
+position:fixed;  
+
+background-color:black;
+
+top:25vmax;  
+
+opacity:0;
+    
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+.genre-lines{
+    
+width:25vw; 
+
+height:0.3em; 
+
+position:fixed;  
+
+background-color:black;
+
+top:40vmin;  
+
+opacity:0;
+    
+}
+
+}
+
+
+
+
+
+
+#genre-line-one{
+    
+left:0vw; 
+
+opacity:1;   
+    
+}
+
+#genre-line-two{
+    
+left:25vw;    
+    
+}
+
+#genre-line-three{
+    
+right:25vw;    
+    
+}
+
+#genre-line-four{
+    
+right:0vw;    
+    
+}
+
+
+
+
+.genre{
+    
+font-family: 'MuseoModerno', cursive;
+
+color:#dcdcdc;
+
+position:fixed;
+
+top:30vmin;
+
+font-weight:normal;
+
+    
+}
+
+
+#genre-Dubstep{
+
+left:2vw;  
+    
+}
+
+
+#genre-DNB{
+
+left:27vw;    
+    
+}
+
+
+#genre-EDM{
+
+right:40vw;    
+    
+}
+
+
+#genre-Electronic{
+
+right:2vw;    
+    
+}
+
+
+
+#genre-Hip-Hop{
+
+left:2vw;    
+    
+}
+
+
+#genre-House{
+
+left:27vw;    
+    
+}
+
+
+#genre-Other{
+
+right:2vw;    
+    
+}
+
+
+#genre-Pop{
+
+right:37vw;    
+    
+}
+
+
+
+
+#genre-Techno{
+
+left:2vw;    
+    
+}
+
+
+#genre-Trap{
+
+left:27vw;    
+    
+}
+
+
+#genre-list-one{
+
+display:block;    
+    
+}
+
+#genre-list-two{
+
+display:none;    
+    
+}
+
+#genre-list-three{
+
+display:none;    
+    
+}
+
+
+.slider-lines{
+
+width:50vw; 
+
+height:2em;  
+
+position:fixed; 
+
+background-color:#74923a;    
+
+top:43.5vmin;
+
+opacity:1;
+
+font-family: 'Changa', sans-serif;
+
+color:white;
+    
+}
+
+#first-slider{
+
+left:0vw;    
+    
+}
+
+
+#second-slider{
+
+right:0vw;    
+    
+}
+
+#app-header{
+
+width:100vw;
+
+height:25vmax;    
+
+position:fixed;
+
+background-color:#ff5252;
+
+left:0vw;
+
+top:0vh;
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+
+#app-header{
+
+width:100vw;
+
+height:40vmin;    
+
+position:fixed;
+
+
+
+left:0vw;
+
+top:0vh;
+    
+}
+
+
+
+}
+
+
+#hot_in_genre{
+ 
+position:absolute; 
+
+font-size:1.2em;
+
+font-family: 'Orbitron', sans-serif;  
+
+font-weight:bold;  
+
+left:5vw;  
+
+top:62vmin; 
+
+color:#74923a;
+
+    
+}
+
+
+.hot-images{
+
+width:45vw;  
+
+height:35vw;
+
+position:absolute;  
+
+top:18em;
+
+border-radius:0.5vw;
+    
+
+}
+
+#hot-image-one{
+
+left:2.5vw;    
+    
+}
+
+#hot-image-two{
+
+right:2.5vw;    
+    
+}
+
+
+.hot-texts{
+
+position:absolute;
+    
+top:94vmin;
+
+color:white;
+
+font-size:1.5em;    
+
+font-family: 'Recursive', sans-serif; 
+
+font-weight:bold;
+
+    
+}
+
+@media only screen and (min-width: 600px) {
+
+.hot-texts{
+
+position:absolute;
+    
+top:50vmax;
+
+
+font-size:1.5em;    
+
+font-family: 'Recursive', sans-serif;  
+
+font-weight:bold;
+
+    
+}
+
+
+}
+
+
+#hot-text-one{
+ 
+left:15vw;    
+    
+}
+
+#hot-text-two{
+
+right:15vw;    
+    
+}
+
+
+.explore-hot-but{
+
+position:absolute;    
+
+top:118vmin;
+
+background-color:#ff5252;
+
+width:45vw;
+
+height:2em;
+
+font-family: 'Changa', sans-serif;   
+
+color:#dcdcdc;
+
+}
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+.explore-hot-but{
+
+position:absolute;    
+
+top:74vmax;
+
+
+
+width:45vw;
+
+height:2em;
+
+font-family: 'Changa', sans-serif;   
+
+color:#dcdcdc;
+
+}
+
+
+
+}
+
+
+#explore-hot-one{
+    
+left:2.5vw;    
+    
+}
+
+
+#explore-hot-two{
+    
+right:2.5vw;  
+    
+}
+
+
+
+#all_songs_text{
+
+position:absolute;
+    
+top:149vmin;
+
+color:#74923a;
+
+font-size:1.2em;    
+
+font-family: 'Orbitron', sans-serif;      
+
+left:5vw;
+
+
+
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+
+#all_songs_text{
+
+position:absolute;
+    
+top:90vmax;
+
+color:#74923a;
+
+font-size:1.2em;    
+
+font-family: 'Orbitron', sans-serif;      
+
+left:5vw;
+
+
+
+    
+}
+
+
+
+}
+
+
+
+#audio_player_div{
+    
+background-color:rgb(34,34,43);
+
+position:fixed;  
+
+left:0vw; 
+
+top:0vh;
+
+width:100vw;
+
+height:27vmax;
+
+
+display:none;    
+    
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+
+#audio_player_div{
+    
+background-color:rgb(34,34,43);
+
+position:fixed;  
+
+left:0vw; 
+
+top:0vh;
+
+width:100vw;
+
+height:42vmin;
+
+
+    
+    
+    
+}
+
+
+}
+
+
+ #exit-embed{
+     
+position:fixed; 
+   
+top:1em; 
+
+left:90vw;  
+
+width:1.5em;
+
+height:1.5em;
+
+font-family:Orbitron, sans-serif;
+
+border-radius:4%;
+
+}
+   
+
+
+
+#main_content{
+    
+display:block;    
+    
+}
+
+#chat_embed{
+    
+display:none;    
+    
+}
+
+
+
+
+
+#music_player{
+
+position:fixed;
+
+height:100vh;  
+
+width:100vw;  
+
+top:0;
+
+left:0;
+
+background-color:white;
+
+display:none;
+
+}
+
+
+#music_header{
+
+position:fixed; 
+
+width:100vw; 
+
+height:20vh;
+
+top:0; 
+
+left:0; 
+
+background-color:#ff5252;
+    
+    
+}
+
+
+#song_title{
+
+position:fixed;   
+
+color:#74923a; 
+
+top:40vh;
+
+left:25vw;
+
+font-size:2em;
+
+font-family: 'MuseoModerno', cursive;
+
+font-weight:bold;
+    
+}
+
+
+#song_author{
+
+position:fixed;   
+
+color:#fdcd3b; 
+
+top:50vh;
+
+left:20vw;
+
+font-size:1.5em;
+
+font-family: 'MuseoModerno', cursive;
+
+font-weight:bold;
+    
+}
+
+
+#audio{
+    
+position:fixed;
+
+left:10vw;
+
+width:80vw;
+
+top:70vh;
+    
+}
+
+
+
+#exit-media{
+     
+position:fixed; 
+   
+top:10vh; 
+
+left:80vw;  
+
+width:2em;
+
+height:2em;
+
+font-family:Orbitron, sans-serif;
+
+border-radius:4%;
+
+}
+
+
+
+#app_name_music{
+
+position:fixed;
+    
+font-family: 'Orbitron', sans-serif;
+
+color:white; 
+
+top:5vh; 
+
+left:30vw;  
+
+font-size:1.5em;
+
+font-weight:bold;
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+
+#music_header{
+    
+height:25vh;
+    
+}
+
+#song_title{
+
+top:35vh;    
+
+font-size:1.5em;
+    
+}
+
+
+#song_author{
+
+top:50vh;    
+
+font-size:1.2em;
+    
+}
+
+
+#exit-media{
+    
+top:4vh;    
+
+left:90vw;
+    
+}
+
+}
+       
+
+
+#info_menu{
+    
+display:none;    
+    
+}
+
+
+
+#disclaimer{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:10vh;
+  
+    
+}
+
+
+
+#features{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:30vh;
+  
+    
+}
+
+
+#bandlab{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:45vh;
+  
+    
+}
+
+
+
+#groovy{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:55vh;
+  
+    
+}
+
+
+#groovepad{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:65vh;
+  
+    
+}
+
+
+
+#LoopPad{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:75vh;
+  
+    
+}
+
+
+#Splash{
+
+position:absolute;
+        
+font-family: 'Recursive', sans-serif;
+
+font-size:1em;
+
+word-spacing:0.2em;
+
+top:85vh;
+  
+    
+}
+
+
+#exit-info{
+     
+position:fixed; 
+   
+top:4vh; 
+
+left:80vw;  
+
+width:2em;
+
+height:2em;
+
+font-family:Orbitron, sans-serif;
+
+border-radius:4%;
+
+}
+
+
+
+
+    
+    
+    
+</style>
+
+
+        
     </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <body class="unselectable">
     
+    
+    <div id="main_content">
+    
+    
+<!--%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%-->
+
+
+
+<div id="hot_in_genre">Hot</div>
+
+<img src="https://images.unsplash.com/photo-1506628150-ab62050f199c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" id="hot-image-one" class="hot-images">
+
+<img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"  id="hot-image-two" class="hot-images">
+
+<div id="hot-text-one" class="hot-texts">Street</div>
+
+<div id="hot-text-two" class="hot-texts">Plan</div>
+
+<div id="explore-hot-one" class="explore-hot-but"> Explore More Below! </div>
+
+<div id="explore-hot-two" class="explore-hot-but">Explore More Below!</div>
+
+
+<div id="all_songs_text">All Songs</div>
+
+
+
+<!--###############***************########-->
+
+
+<div id="app-header">
+  
+    <div id="status-bar-box" >
+    
+<div id="line-one" class="menu-bar-lines" onclick="showHiddenIcons();"></div> 
+   
+<div id="line-two" class="menu-bar-lines" onclick="showHiddenIcons();"></div>     
+    
+<div id="line-three" class="menu-bar-lines" onclick="showHiddenIcons();"></div>     
+    
+    </div>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->    
+   
+   <div id="desc-resources">
+    
+<div id="app-name">Vergo</div>   
+
+<img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/turntable-512.png" id="app-logo">
+    
+    </div>
+    
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->    
+ 
+ 
+ 
+ 
+ <div id="hidden-icons" style="display:none;">
      
+<img src="https://img.pngio.com/chat-png-icon-free-download-searchpngcom-chat-png-1253_1152.png" id="discord-icon" onclick="openChat();"> 
+
+<img src="https://icon-library.com/images/icon-info/icon-info-7.jpg" id="info-button" onclick="openInfo();">    
+     
+     
+ </div>
+ 
+ 
+  
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->  
+  
+ <div id="header-mark-end"></div>  
+ 
+ 
+ 
+ <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+ 
+ 
+ <div id="genre-lines">
+     
+<div id="genre-line-one" class="genre-lines" ontouchstart="rightToNextGenreList();"> </div>   
+
+<div id="genre-line-two" class="genre-lines" ontouchstart="rightToNextGenreList();"> </div>   
+
+<div id="genre-line-three" class="genre-lines" ontouchstart="leftToPreviousGenreList();"> </div>   
+
+<div id="genre-line-four" class="genre-lines" ontouchstart="leftToPreviousGenreList();"> </div>     
+     
+ </div>
+ 
+<div id="genre-list-one"> 
+
+ <div id="genre-Dubstep" class="genre"  onclick="genreClicked(this.id,'genre-line-one','Dub');">Dubstep </div>
+ 
+ <div id="genre-DNB" class="genre"  onclick="genreClicked(this.id,'genre-line-two','Dnb');">DNB </div>
+ 
+ <div id="genre-EDM" class="genre"  onclick="genreClicked(this.id,'genre-line-three','Edm');">EDM </div>
+ 
+ <div id="genre-Electronic" class="genre"  onclick="genreClicked(this.id,'genre-line-four','Elec');">Electronic </div>
+ 
+ </div>
+ 
+ 
+<div id="genre-list-two"> 
+ 
+<div id="genre-Hip-Hop" class="genre"  onclick="genreClicked(this.id,'genre-line-one','Hip');">Hip-Hop </div>
+
+ <div id="genre-House" class="genre"  onclick="genreClicked(this.id,'genre-line-two','House');">House </div>
+ 
+ <div id="genre-Other" class="genre"  onclick="genreClicked(this.id,'genre-line-four','Other');">Other </div>
+ 
+ <div id="genre-Pop" class="genre"  onclick="genreClicked(this.id,'genre-line-three','Pop');">Pop </div>
+ 
+ </div>
+
+
+<div id="genre-list-three"> 
+ 
+ <div id="genre-Techno" class="genre"  onclick="genreClicked(this.id,'genre-line-one','Tech');">Techno </div>
+ 
+ <div id="genre-Trap" class="genre"  onclick="genreClicked(this.id,'genre-line-two','Trap');">Trap </div>
+  
+</div>
+
+
+<div id="first-slider" class="slider-lines" ontouchstart="rightToNextGenreList();">Click or slide here</div> 
+
+<div id="second-slider" class="slider-lines" ontouchstart="leftToPreviousGenreList();">Click or slide here</div>
+
+
+
+<div id="audio_player_div"></div>
+
+
+
+
+
+<!-- static header items finished ::::::::-->
+
+</div>
+
+
+<!-- absolute header items beginning :::::-->
+
+
+
+</div>
+
+
+
+<div id="chat_embed">
+    
+<iframe src="https://minnit.chat/VergoConnect?embed&&nickname=" style="border:none;width:100vw;height:80vh;" allowTransparency="true"></iframe>
+ 
+  
+<img src="https://pluspng.com/img-png/exit-png-exit-icon-image-4600-512.png" id="exit-embed" onclick="exitEmbed();">      
+      
     
     
-    <div id="Main" >
-<div id="header" class="res" ></div>      
-
-<div id="dot1" onclick="" class="res" ></div> 
-<div id="dot2" onclick="" class="res" ></div>
-<div id="dot3" onclick="" class="res" ></div>
-<div id="dot4" onclick="" class="res" ></div>
-<div id="dot5" onclick="" class="res" ></div>
-
-<p id="zvue" class="res" >Eximo</p>
-
-<a href="https://discord.gg/xwaPDY"><img src="https://icon-library.com/images/yellow-discord-icon/yellow-discord-icon-8.jpg" id="cordimg" class="res"></a>
-
-<a href="https://eximomusic.blogspot.com/2020/07/whats-eximo.html?m=1"><img src="https://i7.uihere.com/icons/73/1003/795/about-me-98809d14ae002002520ea8bb7dd24f4e.png" id="aboutimg" class="res" ></a>
+</div>
 
 
-<div style="position:absolute; top:20%; left:15%; color:orange; font-family: 'MuseoModerno', cursive;" class="res" >#trap</div>
-
-<div style="position:absolute; top:15%; left:22%; color:blue; font-family: 'MuseoModerno', cursive;" class="res" >#dubpower</div>
-
-<div style="position:absolute; top:15%; left:50%; color:green; font-family: 'MuseoModerno', cursive;" class="res" >#letsloopthis</div>
-
-<div style="position:absolute; top:24%; left:12%; color:purple; font-family: 'MuseoModerno', cursive;" class="res" >#reggaeislife</div>
-
-<div style="position:absolute; top:20%; left:28%; color:red; font-family: 'MuseoModerno', cursive;" class="res" >#hiphopfire</div>
-
-<div style="position:absolute; top:20%; left:55%; color:black; font-family: 'MuseoModerno', cursive;" class="res" >#soulmusic</div>
-
-<div style="position:absolute; top:23%; left:60%; color:orange; font-family: 'MuseoModerno', cursive;" class="res" >#makemoremusic</div>
-
-<div style="position:absolute; top:35%; left:5%; color:#fdcd3b; font-family: 'Orbitron', sans-serif; font-weight:Bold; " class="res" >What's New</div>
-
-<img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:100%; height:33%; top:47%; left:0%;" class="res" >
-
-<div style="position:absolute; top:55%; left:20%; color:#fdcd3b; font-family: 'MuseoModerno', cursive; font-size:1.2em; font-weight:bold;" class="res" >Always something new everyday! <br /> Click on the categories to explore!</div>
-
-<div style="position:absolute; top:90%; left:5%; color:#fdcd3b; font-family: 'Orbitron', sans-serif; font-weight:Bold; " class="res" >Categories</div>
+<div id="music_player">
+    
+<div id="music_header"></div>
+    
+    
+ 
 
 
-<img src="https://images.unsplash.com/photo-1516149893016-813d9a01d5d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:97%; left:0%;" class="res" onclick="goPlayer('Dub','Dubstep');">
+<div id="song_title">Vermeer</div>  
 
-<div style="position:absolute; top:97%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Dubstep</p></div>
-
-
+<div id="song_author">By Groovy Loops</div>
 
 
-<img src="https://images.unsplash.com/photo-1499956933218-2736dfc91184?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:127%; left:0%;" class="res" onclick="goPlayer('Dnb','DNB');">
+<audio src="https://www.dropbox.com/s/6qnlmu0kuiv6d82/vermeer-by-dj-xpressive-on-2020-08-01t164214710448z.wav?raw=1" id="audio" controls></audio>
 
-<div style="position:absolute; top:127%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p>DnB</p></div>
-
-
-
-<img src="https://images.unsplash.com/photo-1521574778337-d962ef81733d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:157%; left:0%;" class="res" onclick="goPlayer('Edm','EDM');">
-
-<div style="position:absolute; top:157%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p>EDM</p></div>
-
-
-<img src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:187%; left:0%;" class="res" onclick="goPlayer('Elec','Electronic');">
-
-<div style="position:absolute; top:187%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Electronic</p></div>
-
-
-
-<img src="https://images.unsplash.com/photo-1494883759339-0b042055a4ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:217%; left:0%;" class="res" onclick="goPlayer('Hip','Hip-Hop');">
-
-<div style="position:absolute; top:217%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Hip-Hop</p></div>
-
-
-
-
-
-
-
-
-<img src="https://images.unsplash.com/photo-1527684002373-02a02a68e86f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60vw; height:20%; top:247%; left:0%;" class="res" onclick="goPlayer('House','House');">
-
-<div style="position:absolute; top:247%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >House</p></div>
-
-
-
-
-<img src="https://images.unsplash.com/photo-1505150099521-fde7970bcc3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:277%; left:0%;" class="res" onclick="goPlayer('Other','Other Genre');">
-
-<div style="position:absolute; top:277%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p  class="res" >Other</p></div>
-
-
-
-<img src="https://images.unsplash.com/photo-1490723186985-6d7672633c86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:307%; left:0%;" class="res" onclick="goPlayer('Pop','Pop');">
-
-<div style="position:absolute; top:307%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Pop</p></div>
-
-
-<img src="https://images.unsplash.com/photo-1464986411762-a4275fbaf3f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:337%; left:0%;" class="res" onclick="goPlayer('Tech','Techno');">
-
-<div style="position:absolute; top:337%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Techno</p></div>
-
-
-
-<img src="https://images.unsplash.com/photo-1535146851324-6571dc3f2672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" style="position:absolute; width:60%; height:20%; top:367%; left:0%;" class="res" onclick="goPlayer('Trap','Trap');">
-
-<div style="position:absolute; top:367%; right:0%; color:White; font-family: 'Orbitron', sans-serif; font-weight:Bold; width:40%; height:20%; background-color:#fdcd3b; text-align:center; font-size:1.4em;" class="res" ><br /><p class="res" >Trap</p></div>
+<img src="https://pluspng.com/img-png/exit-png-exit-icon-image-4600-512.png" id="exit-media" onclick="exitMedia();">     
 
 </div>
 
 
 
 
+<div id="info_menu">
+    
+<p id="disclaimer">All songs have been made using loopers only and are subject to copyright and are for personal use only.</p> 
+
+<br />
+
+<p id="features">Looper apps featured in this app:</p>    
 
 
+<a href="https://play.google.com/store/apps/details?id=com.bandlab.bandlab" id="bandlab">BandLab: Record, sing, master audio and lots more!</a>
 
- <div id="noRotate" style="position:fixed; left:0%; top:0%; height:1000vh; width:100%; background-color:orange; display:none;">
+<a href="https://play.google.com/store/apps/details?id=tech.amazingapps.groovyloops" id="groovy">Groovy Loops: Just as the name suggests, groovy vibes only </a>
 
-<p style="position:fixed; left:15%; top:15%; font-family: 'Orbitron', sans-serif; font-size:1.5em;">Error:Width is greater than height! <br /> <br> Pls Resize_</p>    
+<a href="https://play.google.com/store/apps/details?id=com.easybrain.make.music" id="groovepad">Groovepad: Make music and beats on the fly! </a>
+
+<a href="https://play.google.com/store/apps/details?id=com.mobiray.djlaunchpad" id="LoopPad">DJ Loop Pad: Want to be a DJ? No problem! </a>
+
+<a href="https://play.google.com/store/apps/details?id=ai.popgun.splashpad" id="Splash">Splash: Create Beats, Perform Live, Layer Melodies, sound fx and more! </a>
+
+<img src="https://pluspng.com/img-png/exit-png-exit-icon-image-4600-512.png" id="exit-info" onclick="exitInfo();">     
+
     
     
-</div>       
- 
+</div>  
+
+<script src="https://oconquest.github.io/BeatsJs/"></script>
+
+
+<script>
+
+
+var curGenreList=0;
+
+function rightToNextGenreList(){
 
 
 
-
-
-
-
-
-
-
-
-<div id="playarea" style="width:97vw; height:1000vh; left:0%; top:0%; display:none;">
- 
- 
- <p style="position:absolute; left:25%; top:60%; color:grey; font-size:2em; font-family: 'MuseoModerno', cursive; font-weight:bold; text-align:right;" id="genre">Dubstep</p>   
-  
- 
+if( curGenreList != 2)  {
+    
+curGenreList++;
+    
+}  
    
-  
-<a href="" id="dwnlink"><img src="https://webstockreview.net/images/png-images-download-9.png" style="position:fixed; top:67vh; right:2.5vw; width:10%; height:5%;"></a>
+if( curGenreList == 1) {
+    
+document.getElementById("genre-list-one").style.display="none";
+
+document.getElementById("genre-list-two").style.display="block";   
+    
+}   
+
+if( curGenreList == 2) {
+    
+document.getElementById("genre-list-two").style.display="none";
+
+document.getElementById("genre-list-three").style.display="block";   
+    
+}   
 
     
-   <img src="https://i.pinimg.com/originals/2a/a5/76/2aa5768c53789ad6d449e2e0633e5c8a.gif" style="position:fixed; top:0vh; left:0vw; width:100%; height:60%;">  
-
-<img src="https://pluspng.com/img-png/exit-png-exit-icon-image-4600-512.png" style="position:fixed; top:2.5vh; right:5vw; width:12%; height:7%;" onclick="bck();">
-     
- <div  class="ref"  ><p style="position:fixed; left:0%; top:10%; color:white; font-size:2em; font-family: 'MuseoModerno', cursive; font-weight:bold; text-align:middle;" id="title" ></p>  
-    <audio src="" controls id="audBox"></audio> 
-     
- </div>
-
- <div id="noRotatex" style="position:fixed; left:0%; top:0%; height:1000vh; width:100%; background-color:orange; display:none;">
-
-<p style="position:fixed; left:15%; top:15%; font-family: 'Orbitron', sans-serif; font-size:1.5em;">Error:Width is greater than height! <br /> <br> Pls Resize_</p>    
     
+}
+
+
+
+function leftToPreviousGenreList(){
+
+
+
+if( curGenreList != 0)  {
     
-</div>       
- 
- 
+curGenreList--;
+    
+}  
    
-  
-
- 
- <script>
-     
-     function newPost(a,b,c){
+if( curGenreList == 1) {
     
-var p = document.createElement("P");
+document.getElementById("genre-list-three").style.display="none";
 
-p.innerHTML=b;
-
-document.body.prepend(p);
-
-document.getElementById("playarea").prepend(p);
-
-p.style.position="absolute";
-
-p.style.display="none";
-
-p.style.color="orange";
+document.getElementById("genre-list-two").style.display="block";   
     
-p.style.fontFamily="'Orbitron', sans-serif"; 
+}   
 
-p.style.fontSize="0.9em";  
+if( curGenreList == 0) {
+    
+document.getElementById("genre-list-two").style.display="none";
 
-p.style.fontWeight="bold";
+document.getElementById("genre-list-one").style.display="block";   
+    
+}   
 
-p.className=a;
+    
+    
+}
 
-p.style.left="10%";
 
-p.style.top= document.getElementsByClassName(a).length  * 10 + 70 + "%";
+function showOneGenre(sOG){
 
-p.onclick= function () { changeSong(a,b,c.substring(0,c.length-5) + "raw=1")};
+var gen=document.getElementsByClassName(sOG);
 
+var gentxt= document.getElementsByClassName(sOG + "second");
+
+var genimg= document.getElementsByClassName(sOG + "Img");
+
+var gendwn= document.getElementsByClassName(sOG + "Imgdwn");
+    
+for(var genx=0; gen.length > genx; genx++){ 
+
+
+gentxt[genx].style.display="block";
+
+gen[genx].style.display="block";
+
+genimg[genx].style.display="block";
+
+gendwn[genx].style.display="block";   
+    
+}
+
+}
+
+
+function genreClicked(a,b,c){
+        
+var allgenre= document.getElementsByClassName("genre");    
+
+for(var x=0; allgenre.length > x; x++){
+
+allgenre[x].style.color="white";
+
+allgenre[x].style.fontWeight="normal";
+
+allgenre[a].style.color="grey"; 
+
+allgenre[a].style.fontWeight="Bold";
+    
+}
+
+
+var genreLines= document.getElementsByClassName("genre-lines");
+
+for(var y=0; genreLines.length > y; y++){
+
+genreLines[y].style.opacity=0;
+
+genreLines[b].style.opacity=1; 
+
+}
+
+
+var dub=document.getElementsByClassName("alltitle");
+
+var dubtxt= document.getElementsByClassName("allauthor");
+
+var dubimg= document.getElementsByClassName("allimage");
+
+var dubdwn= document.getElementsByClassName("alldwn");
+
+for(var dubx=0; dub.length > dubx; dubx++){
+
+
+
+dubtxt[dubx].style.display="none";
+
+dub[dubx].style.display="none";
+
+dubimg[dubx].style.display="none";
+
+dubdwn[dubx].style.display="none";
+
+
+
+}
+
+showOneGenre(c);
 
     
 }
+
+
+
+
+function newSong(genre,title,author,songSrc){
+
+var newStr= songSrc.substring(0, songSrc.length-5) + "raw=1";
+
+
+
+var css = document.createElement("STYLE");
+
+var firstP= document.createElement("DIV");
+
+firstP.className= genre + " alltitle";
+
+firstP.id = genre + "title" + document.getElementsByClassName(genre).length;
+
+firstP.innerHTML = title;
+
+
+firstP.onclick= function () { changeSong(newStr,title,author)};
+
+
+document.body.prepend(css);
+
+document.body.prepend(firstP);
+
+
+
+
+css.innerHTML += "#" + firstP.id + "{ \n \n position:absolute; \n \n left:25vw; \n \n     font-family: 'Orbitron', sans-serif; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 25 + 150) + "vmin; \n \n color:#ff5252; \n \n  font-weight:bold; \n \n display:none; \n \n}" + "\n \n @media only screen and (min-width: 600px) { \n \n #" + firstP.id + "{ \n \n position:absolute; \n \n left:25vw; \n \n     \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 15 + 90) + "vmax; \n \n font-weight:bold;  \n \n} \n \n }";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var secondP = document.createElement("DIV");
+
+secondP.className = genre + "second allauthor";
+
+secondP.id = genre + "author" + document.getElementsByClassName(genre).length;
+
+secondP.innerHTML = author;
+
+
+
+document.body.prepend(secondP);
+
+
+
+
+css.innerHTML += "#" + secondP.id + "{ \n \n position:absolute; \n \n left:25vw; \n \n     font-family: 'Recursive', sans-serif; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 25 + 158) + "vmin; \n \n color:#74923a;  \n \n  font-weight:normal; \n \n display:none; \n \n}" + "\n \n @media only screen and (min-width: 600px) { \n \n #" + secondP.id + "{ \n \n position:absolute; \n \n left:25vw; \n \n     \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 15 + 95) + "vmax; \n \n font-weight:normal;  \n \n} \n \n } \n \n";
+
+
+var img= document.createElement("IMG");
+
+img.className = genre + "Img allimage";
+
+img.id = genre + "Img" + document.getElementsByClassName(genre).length;
+
+img.src="https://free4kwallpapers.com/uploads/originals/2020/05/09/dj-headphones-by-mikael-kristenson-wallpaper.jpg";
+
+
+document.body.prepend(img);
+
+css.innerHTML += "#" + img.id + "{ \n \n position:absolute; \n \n width:2em; \n \n height:2em; \n \n left:5vw; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 25 + 152) + "vmin; \n \n display:none; \n \n } \n \n " +  "@media only screen and (min-width: 600px) { \n \n #" + img.id + "{ \n \n position:absolute; \n \n width:2em; \n \n height:2em; \n \n left:5vw; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 15 + 92) + "vmax; \n \n } \n \n} \n \n";
+
+
+var dwnImg= document.createElement("IMG");
+
+
+var link= document.createElement("A");
+
+link.href=newStr;
+
+document.body.prepend(link);
+
+
+document.body.prepend(dwnImg);
+
+link.appendChild(dwnImg);
+
+
+
+
+
+
+
+dwnImg.className = genre + "Imgdwn alldwn";
+
+dwnImg.id = genre + "Imgdwn" + document.getElementsByClassName(genre).length;
+
+dwnImg.src="https://img.icons8.com/all/500/download-from-cloud.png";
+
+
+
+
+css.innerHTML += "#" + dwnImg.id + "{ \n \n position:absolute; \n \n width:3em; \n \n height:2em; \n \n left:75vw; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 25 + 152) + "vmin; \n \n display:none; \n \n } \n \n " +  "@media only screen and (min-width: 600px) { \n \n #" + dwnImg.id + "{ \n \n position:absolute; \n \n width:3em; \n \n height:2em; \n \n left:75vw; \n \n top:" + "" + (document.getElementsByClassName(genre).length  * 15 + 92) + "vmax; \n \n } \n \n} \n \n";
+
+//alert(css.innerHTML);
+
+
+}
+
+
+
+
+    
+
 
 function changeSong(a,b,c){
 
-var audio = document.getElementById("audBox");
+var audio = document.getElementById("audio");
 
-audio.src = c;
+audio.src = a;
 
-var div = document.getElementById("title");
+var div = document.getElementById("song_title");
 
 div.innerHTML= b;
 
-var dwnlink= document.getElementById("dwnlink");
+var divv = document.getElementById("song_author");
 
-dwnlink.href=c;
+divv.innerHTML= c;
 
-    
+
+
+
+var dub=document.getElementsByClassName("alltitle");
+
+var dubtxt= document.getElementsByClassName("allauthor");
+
+var dubimg= document.getElementsByClassName("allimage");
+
+var dubdwn= document.getElementsByClassName("alldwn");
+
+for(var dubx=0; dub.length > dubx; dubx++){
+
+
+
+dubtxt[dubx].style.display="none";
+
+dub[dubx].style.display="none";
+
+dubimg[dubx].style.display="none";
+
+dubdwn[dubx].style.display="none";
+
+
+
+}
+
+
+
+
+document.getElementById("main_content").style.display= "none";
+
+document.getElementById("music_player").style.display="block";
+
+
 }
 
 
@@ -381,108 +1660,169 @@ dwnlink.href=c;
      
      
      
-     
-var currentCat="";
-
-function resize(){
-
- var height= window.innerHeight;
- 
- var width= window.innerWidth; 
 
 
-    
-if(height< width){
 
-document.getElementById("noRotate").style.display="block"; 
+function showHiddenIcons(){
 
-document.getElementById("noRotatex").style.display="block"; 
-    
-} 
+document.getElementById("status-bar-box").style.display="none"; 
+
+document.getElementById("hidden-icons").style.display="block";
 
 
-if(width< height){
-
-document.getElementById("noRotate").style.display="none"; 
-
-document.getElementById("noRotatex").style.display="none"; 
-
-    
-} 
-
-
-   
-    
-}
-
-function goPlayer(dgx,dgy){
-
-var all= document.getElementsByClassName(dgx);
-
-document.getElementById("Main").style.display="none";
-
-
-document.getElementById("playarea").style.display="block";
-
-document.getElementById("genre").innerHTML=dgy;
-
-
-for(var i=0; all.length > i; i++){
-
-all[i].style.display="block";   
-    
-}
-
-currentCat=dgx;
-    
-}
-
-
-function bck(){
-    
-document.getElementById("genre").innerHTML="";   
-
-var all= document.getElementsByClassName(currentCat);
- 
-for(var i=0; i < all.length; i++){
-
-all[i].style.display="none";   
-    
-} 
-
-document.getElementById("playarea").style.display="none"; 
-
-document.getElementById("Main").style.display="block";
-
-document.getElementById("title").innerHTML="";
-
-document.getElementById("audBox").src="";
-    
+setTimeout(function(){document.getElementById("status-bar-box").style.display="block"; document.getElementById("hidden-icons").style.display="none";},7000);
     
 }
 
 
 
+function openChat(){
 
-setInterval(resize,1000);     
-     
-     
-     
-     
-     
- </script>
+
+
+var dub=document.getElementsByClassName("alltitle");
+
+var dubtxt= document.getElementsByClassName("allauthor");
+
+var dubimg= document.getElementsByClassName("allimage");
+
+var dubdwn= document.getElementsByClassName("alldwn");
+
+for(var dubx=0; dub.length > dubx; dubx++){
+
+
+
+dubtxt[dubx].style.display="none";
+
+dub[dubx].style.display="none";
+
+dubimg[dubx].style.display="none";
+
+dubdwn[dubx].style.display="none";
+
+
+
+}
+
+
+
+
+document.getElementById("main_content").style.display= "none";
+
+document.getElementById("chat_embed").style.display="block";
+    
+    
+}
+
+
+function exitEmbed(){
+
+document.getElementById("main_content").style.display= "block";
+
+document.getElementById("chat_embed").style.display="none";
+    
+    
+}
+
+
+function exitMedia(){
+
+document.getElementById("main_content").style.display= "block";
+
+document.getElementById("music_player").style.display="none";
+    
+    
+}
+
+
+function tut(){
+    
+setTimeout(function(){ document.getElementById("first-slider").style.opacity="0";  document.getElementById("second-slider").style.opacity="0"; },4000);  
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+function openInfo(){
+
+
+
+var dub=document.getElementsByClassName("alltitle");
+
+var dubtxt= document.getElementsByClassName("allauthor");
+
+var dubimg= document.getElementsByClassName("allimage");
+
+var dubdwn= document.getElementsByClassName("alldwn");
+
+for(var dubx=0; dub.length > dubx; dubx++){
+
+
+
+dubtxt[dubx].style.display="none";
+
+dub[dubx].style.display="none";
+
+dubimg[dubx].style.display="none";
+
+dubdwn[dubx].style.display="none";
+
+
+
+}
+
+
+
+
+document.getElementById("main_content").style.display= "none";
+
+document.getElementById("info_menu").style.display="block";
+    
+    
+}
+
+
+function exitInfo(){
+
+document.getElementById("main_content").style.display= "block";
+
+document.getElementById("info_menu").style.display="none";
+    
+    
+}
+
+
+
+
+
+ genreClicked("genre-Dubstep",'genre-line-one','Dub');
  
- 
- <script src="https://oconquest.github.io/BeatsJs/"></script>
+ tut();
 
  
-     
-
-
-
-
-
+</script>
+  
+        
+    
+        
 
 
     </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </html>
