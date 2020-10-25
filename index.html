@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loop Store</title>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+ <link  href="https://oconquest.github.io/customCss/index.css" rel="stylesheet">     
+ 
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+
+<style>
+
+gT{
+position:absolute; 
+color:white;
+font-weight:bold; 
+font-size:1.4em;  
+left:0.4em;
+font-family: 'Grandstander', cursive;
+
+}
+
+
+genre{
+position:absolute;
+background-color:none;    
+}
+
+.g-imgs{
+position:absolute;  
+width:12em;  
+height:10em;
+top:1em;
+border-radius:10%;
+}
+
+subT{
+position:absolute;  
+font-weight:bold;  
+color:white;
+font-size:1.95em;
+top:2em;
+font-family: 'Grandstander', cursive;
+}
+
+
+
+
+#exit-player{
+position:fixed;
+top:0.2em;  
+left:0.4em;  
+color:white;
+font-size:2em;
+}
+
+#player-header{
+position:fixed; 
+top:0em;  
+left:0; 
+width:100vw;
+height:15em;
+    
+}
+
+#audio{
+position:fixed;  
+width:80vw;
+left:10vw;
+top:9em;
+}
+
+
+
+
+aud-title{
+position:fixed;   
+color:#2ECC71; 
+font-family: 'Grandstander', cursive;
+font-size:2em;
+top:3em;
+left:15vw;
+}
+
+
+
+player-gen-title{
+position:fixed;   
+color:white; 
+font-family: 'Oswald', cursive;
+font-size:2em;
+top:0.4em;
+left:35vw;
+}
+
+#download-icon{
+position:fixed;    
+top:8em;
+right:1em;
+color:#2ECC71;
+}
+
+post-div{
+width:100vw; 
+height:6.9em; 
+left:0;
+position:absolute;  
+background-color:#2C3335;
+border-bottom-style:solid;
+border-bottom-color:grey;
+border-bottom-width:0.1em;
+}
+
+.post-img{
+position:absolute;
+width:4em; 
+height:4em; 
+border-radius:50%; 
+left:5vw; 
+}
+
+
+post-name{
+position:absolute;
+color:white;  
+font-size:1.5em; 
+font-family: 'Oswald', cursive;
+left:5vw;
+}
+
+
+post-author{
+position:absolute;
+color:white;  
+font-size:1em; 
+font-family: 'Grandstander', cursive;
+left:5vw;
+}
+
+
+.post-icon{
+position:absolute;    
+right:10vw;
+color:white;
+}
+
+
+
+
+@media screen and (orientation: landscape) {
+
+#exit-player{
+
+position:absolute;
+
+}
+
+#player-header{
+
+position:absolute;
+
+}
+
+#audio{
+
+position:absolute;
+    
+}
+
+aud-title{
+
+position:absolute;
+
+}
+
+
+player-gen-title{
+
+position:absolute;
+
+}
+
+
+#download-icon{
+
+position:absolute;
+
+}
+
+
+}
+
+.Lofi{
+display:none;    
+}
+    
+    
+    
+</style>
+   
+        
+    </head>
+    
+    
+    
+    
+    <body class="unselectable" style="background-image: linear-gradient(to right, #2ECC71 , #16A085);">
+
+<home>
+
+<acon class="footer-icon" style="right:0.8em; top:0.4em; color:white; display:none;" onclick="openSettings();">settings</acon>  
+
+
+<gT style="top:3em;">Hip-Hop</gT>
+        
+<genre class="scroll" style="top:7em;">
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/993877/pexels-photo-993877.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openLofi();">
+
+<subT onclick="openLofi();" style="left:2em;">LO-FI</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/893961/pexels-photo-893961.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openAfro();">
+
+<subT onclick="openAfro();" style="left:9em;">AFROBEAT</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openMainHip();">
+
+<subT onclick="openMainHip();" style="left:15.5em;">MAINSTREAM</subT>
+
+<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
+    
+    
+    
+</genre>
+
+
+
+
+
+
+
+
+
+<gT style="top:17em;">Pop</gT>
+        
+<genre class="scroll" style="top:26em;">
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/1835016/pexels-photo-1835016.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openRnb();">
+
+<subT onclick="openRnb();" style="left:2em;">RNB</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/4973905/pexels-photo-4973905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openWorld();">
+
+<subT onclick="openWorld();" style="left:9em;">WORLD</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openMainPop();">
+
+<subT onclick="openMainPop();" style="left:15.5em;">MAINSTREAM</subT>
+
+<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
+    
+    
+    
+</genre>
+
+
+
+
+<gT style="top:30em;">Electronic</gT>
+        
+<genre class="scroll" style="top:45em;">
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openHouse();">
+
+<subT onclick="openHouse();" style="left:2em;">House</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/3052360/pexels-photo-3052360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openDub();">
+
+<subT onclick="openDub();" style="left:9em;">Dubstep</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/1267350/pexels-photo-1267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openElectro();">
+
+<subT onclick="openElectro();" style="left:15.5em;">Electronic</subT>
+
+<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
+    
+    
+    
+</genre>
+
+
+
+
+
+<gT style="top:44em;">Others</gT>
+        
+<genre class="scroll" style="top:65em;">
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/935959/pexels-photo-935959.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openTrap();">
+
+<subT onclick="openLofi();" style="left:2em;">Trap</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openRock();">
+
+<subT onclick="openAfro();" style="left:9em;">Rock</subT>
+
+
+    
+<img class="g-imgs" src="https://images.pexels.com/photos/3696395/pexels-photo-3696395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openOthers();">
+
+<subT onclick="openMainHip();" style="left:15.5em;">Others</subT>
+
+<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
+    
+    
+    
+</genre>
+
+
+</home>
+
+
+
+
+
+
+<player hidden>
+
+
+
+<img id="player-header" src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
+   
+<fcon id="exit-player" onclick="exitPlayer();">keyboard_backspace</fcon>
+
+<audio controls id="audio" src=""></audio>
+
+<player-gen-title>Rock</player-gen-title>
+
+<aud-title></aud-title>
+
+<a id="download-link" ><fcon id="download-icon">play_for_work</fcon></a>
+
+
+</player>
+
+
+
+
+
+<script>
+
+var pubCurrentGenre;
+
+
+
+
+function openGenre(a,b,c){
+
+window.scrollTo(0,0);
+
+var home= document.getElementsByTagName("home")[0].style.display="none";
+
+var player= document.getElementsByTagName("player")[0].style.display="block";
+
+
+document.getElementsByTagName("player-gen-title")[0].innerHTML=a;
+
+document.getElementById("player-header").src=b;
+
+
+
+
+for(var x=0; document.getElementsByClassName(c).length > x; x++){
+ 
+document.getElementsByClassName(c)[x].style.display="block";
+    
+}
+
+
+
+for(var y=0; document.getElementsByTagName("post-div").length > y; y++){
+ 
+document.getElementsByTagName("post-div")[y].style.backgroundColor="#16A085";
+
+}
+
+
+
+for(var z=0; document.getElementsByClassName("post-icon").length > z; z++){
+ 
+document.getElementsByClassName("post-icon")[z].innerHTML= "play_circle_outline";
+
+}
+
+document.getElementById("download-link").href= "#download-icon";
+
+document.getElementById("audio").src= "";
+    
+
+
+
+pubCurrentGenre=c;   
+    
+
+
+    
+}
+
+
+function openLofi(){
+
+openGenre("Lo-Fi","https://images.pexels.com/photos/993877/pexels-photo-993877.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Lofi");
+
+    
+}
+
+
+
+
+function openAfro(){
+
+openGenre("Afrobeats","https://images.pexels.com/photos/893961/pexels-photo-893961.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Afro");
+    
+}
+
+
+function openMainHip(){
+
+openGenre("Hip-Hop","https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Hip");
+    
+}
+
+
+
+function openRnb(){
+
+openGenre("Rhythm & Blues","https://images.pexels.com/photos/1835016/pexels-photo-1835016.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Rnb");
+    
+}
+
+
+
+function openWorld(){
+
+openGenre("World","https://images.pexels.com/photos/4973905/pexels-photo-4973905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","World");
+    
+
+}
+
+
+
+
+function openMainPop(){
+
+openGenre("Pop","https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Pop");
+    
+}
+
+
+
+function openHouse(){
+
+openGenre("House","https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","House");
+    
+}
+
+
+
+function openDub(){
+
+openGenre("Dubstep","https://images.pexels.com/photos/3052360/pexels-photo-3052360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Dub");
+    
+}
+
+
+
+function openElectro(){
+
+openGenre("Electro & Gaming","https://images.pexels.com/photos/1267350/pexels-photo-1267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Electro");
+    
+}
+
+
+function openTrap(){
+
+openGenre("Trap","https://images.pexels.com/photos/935959/pexels-photo-935959.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Trap");
+    
+}
+
+
+
+function openRock(){
+
+openGenre("Rock","https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Rock");
+    
+}
+
+
+
+function openOthers(){
+
+openGenre("Rhythm & Dance...","https://images.pexels.com/photos/3696395/pexels-photo-3696395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Other");
+    
+}
+
+function exitPlayer(){
+ 
+ var home= document.getElementsByTagName("home")[0].style.display="block";
+
+var player= document.getElementsByTagName("player")[0].style.display="none";  
+
+
+var audTitle= document.getElementsByTagName("aud-title")[0].innerHTML="";  
+
+
+for(var x=0; document.getElementsByClassName(pubCurrentGenre).length > x; x++){
+ 
+document.getElementsByClassName(pubCurrentGenre)[x].style.display="none";
+    
+}
+
+ 
+    
+    
+}
+
+
+
+function post(postClass,postName,postAuthor,postSrc){
+
+
+var icon= document.createElement("acon");
+
+icon.className= "post-icon " + postClass;
+
+
+icon.innerHTML= "play_circle_outline";
+
+
+document.body.appendChild(icon);
+
+document.getElementsByTagName("player")[0].prepend(icon);
+
+
+
+
+
+
+
+var author= document.createElement("post-author");
+
+author.className= postClass;
+
+author.innerHTML= postAuthor;
+
+
+document.body.appendChild(author);
+
+document.getElementsByTagName("player")[0].prepend(author);
+
+
+
+
+var name= document.createElement("post-name");
+
+name.className= postClass;
+
+name.innerHTML= postName;
+
+name.style.top= 11 + (document.getElementsByTagName("post-name").length * 4.6) + "em";
+
+document.body.appendChild(name);
+
+document.getElementsByTagName("player")[0].prepend(name);
+
+
+
+var box= document.createElement("post-div");
+
+box.className= postClass + "box " + postClass;
+
+
+document.body.appendChild(box);
+
+document.getElementsByTagName("player")[0].prepend(box);
+
+
+box.style.top= 8 + (document.getElementsByClassName(postClass + "box").length * 7) + "em";
+
+icon.style.top= 7.6 + (document.getElementsByClassName(postClass + "box").length * 4.4) + "em";
+
+author.style.top= 12 + (document.getElementsByClassName(postClass + "box").length * 7) + "em";
+
+name.style.top= 6.4 + (document.getElementsByClassName(postClass + "box").length * 4.6) + "em";
+
+
+
+icon.style.display="none";
+
+box.style.display="none";
+
+author.style.display="none";
+
+name.style.display="none";    
+
+
+icon.onclick= function (){
+
+
+for(var x=0; document.getElementsByClassName("post-icon").length > x; x++){
+ 
+document.getElementsByClassName("post-icon")[x].innerHTML= "play_circle_outline";
+
+icon.innerHTML= "stop";
+    
+}  
+
+
+
+
+for(var y=0; document.getElementsByTagName("post-div").length > y; y++){
+ 
+document.getElementsByTagName("post-div")[y].style.backgroundColor="#16A085";
+
+box.style.backgroundColor="#2ECC71";
+    
+}
+
+
+document.getElementsByTagName("aud-title")[0].innerHTML= postName;
+
+
+document.getElementById("audio").src= postSrc.substring(0, postSrc.length - 4) + "raw=1";
+
+document.getElementById("download-link").href= postSrc.substring(0, postSrc.length - 4) + "raw=1";
+    
+    
+};
+
+
+
+
+
+}
+
+
+function lofi(a,b,c){
+    
+post("Lofi",a,b,c); 
+    
+}
+
+
+
+function afro(a,b,c){
+    
+post("Afro",a,b,c); 
+    
+}
+
+
+
+function hip(a,b,c){
+    
+post("Hip",a,b,c); 
+    
+}
+
+    
+
+function rnb(a,b,c){
+    
+post("Rnb",a,b,c); 
+    
+}
+
+
+
+function world(a,b,c){
+    
+post("World",a,b,c); 
+    
+}
+
+
+function pop(a,b,c){
+    
+post("Pop",a,b,c); 
+    
+}
+
+
+
+function house(a,b,c){
+    
+post("House",a,b,c); 
+    
+}
+
+
+
+function dub(a,b,c){
+    
+post("Dub",a,b,c); 
+    
+}
+
+
+
+function elec(a,b,c){
+    
+post("Electro",a,b,c); 
+    
+}
+
+
+
+function trap(a,b,c){
+    
+post("Trap",a,b,c); 
+    
+}
+
+
+
+function rock(a,b,c){
+    
+post("Rock",a,b,c); 
+    
+}
+
+
+
+function other(a,b,c){
+    
+post("Other",a,b,c); 
+    
+}
+
+
+
+
+
+
+    
+    
+</script>
+
+<script src="https://oconquest.github.io/BeatsJs/">
+
+
+        
+</script>
+
+
+
+
+
+    
+    </body>
+</html>
