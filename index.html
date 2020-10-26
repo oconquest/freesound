@@ -2,768 +2,891 @@
 <html>
     <head>
         <title>Loop Store</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<meta name="theme-color" content="white"></meta>        
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
- <link  href="https://oconquest.github.io/customCss/index.css" rel="stylesheet">     
+ <link  href="https://oconquest.github.io/customCss/index.css" rel="stylesheet">
  
-<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
 
 <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+ 
+ <style>
+     
 
-<style>
-
-gT{
-position:absolute; 
-color:white;
-font-weight:bold; 
-font-size:1.4em;  
-left:0.4em;
-font-family: 'Grandstander', cursive;
-
+body{
+width:97vw;
+height:auto;
+background-color:white;
+font-size:4.5vw; 
 }
-
-
-genre{
-position:absolute;
-background-color:none;    
-}
-
-.g-imgs{
-position:absolute;  
-width:12em;  
-height:10em;
-top:1em;
-border-radius:10%;
-}
-
-subT{
-position:absolute;  
-font-weight:bold;  
-color:white;
-font-size:1.95em;
-top:2em;
-font-family: 'Grandstander', cursive;
-}
-
-
-
-
-#exit-player{
-position:fixed;
-top:0.2em;  
-left:0.4em;  
-color:white;
-font-size:2em;
-}
-
-#player-header{
-position:fixed; 
-top:0em;  
-left:0; 
-width:100vw;
-height:15em;
-    
-}
-
-#audio{
-position:fixed;  
-width:80vw;
-left:10vw;
-top:9em;
-}
-
-
-
-
-aud-title{
-position:fixed;   
-color:#2ECC71; 
-font-family: 'Grandstander', cursive;
-font-size:2em;
-top:3em;
-left:15vw;
-}
-
-
-
-player-gen-title{
-position:fixed;   
-color:white; 
-font-family: 'Oswald', cursive;
-font-size:2em;
-top:0.4em;
-left:35vw;
-}
-
-#download-icon{
-position:fixed;    
-top:8em;
-right:1em;
-color:#2ECC71;
-}
-
-post-div{
-width:100vw; 
-height:6.9em; 
-left:0;
-position:absolute;  
-background-color:#2C3335;
-border-bottom-style:solid;
-border-bottom-color:grey;
-border-bottom-width:0.1em;
-}
-
-.post-img{
-position:absolute;
-width:4em; 
-height:4em; 
-border-radius:50%; 
-left:5vw; 
-}
-
-
-post-name{
-position:absolute;
-color:white;  
-font-size:1.5em; 
-font-family: 'Oswald', cursive;
-left:5vw;
-}
-
-
-post-author{
-position:absolute;
-color:white;  
-font-size:1em; 
-font-family: 'Grandstander', cursive;
-left:5vw;
-}
-
-
-.post-icon{
-position:absolute;    
-right:10vw;
-color:white;
-}
-
 
 
 
 @media screen and (orientation: landscape) {
 
-#exit-player{
+body{
+font-size:2.5vw;    
+}
 
+}
+
+
+
+
+
+
+dashboard{
+position:fixed; 
+width:5em;
+height:100vh;
+right:0; 
+top:2.4em;
+border-radius:1%;
+background-color:#f6bb42; 
+box-shadow: -2px 0px 3px 0px orange; 
+display:none;
+overflow-y:scroll;
+}
+
+
+dashTxt{
+position:absolute; 
+color:white; 
+font-size:0.8em; 
+right:0.8em; 
+font-family: 'Trispace', sans-serif;
+}
+
+.dash-icon{
+color:white;    
+}
+
+#explore-txt{
 position:absolute;
-
+top:8em; 
+color:white; 
+font-size:1em; 
+left:40vmin; 
+font-family: 'Oswald', cursive;
+font-weight:bold;  
 }
 
-#player-header{
+#explore-icon{
+top:5em;
+left:52vmin; 
+color:white;   
+}
 
+
+.explore-img{
 position:absolute;
-
+width:30vw;
+height:8em; 
+border-top-right-radius:3%;  
+border-top-left-radius:3%;  
 }
 
-#audio{
-
+.explore-div{
 position:absolute;
-    
+width:30vw;
+height:3em;
+background-color:none;
+box-shadow: 0 0 10px orange;
+border-bottom-right-radius:3%;  
+border-bottom-left-radius:3%;        
 }
 
-aud-title{
 
+
+eTxt{
 position:absolute;
+color:white; 
+font-size:1em; 
+font-family: 'Grandstander', cursive;
+font-weight:bold;      
+}
 
+#genre-browse-title{
+position:fixed;
+top:0.8em; 
+left:40vw; 
+font-size:1em;
+font-family: 'Oswald', cursive;  
+color:white;
 }
 
 
-player-gen-title{
-
-position:absolute;
-
+.genre_browse_img{
+position:absolute;   
+width:6em; 
+height:5em;
+border-radius:5%;
+left:2vw;
+display:none;
 }
 
 
-#download-icon{
-
-position:absolute;
-
+.genre_browse_title{
+position:absolute;  
+left:5.8em;  
+font-family: 'Oswald', cursive; 
+font-size:1.2em;
+color:white;
+font-weight:bold;
+display:none;
 }
 
 
+.genre_browse_author{
+position:absolute;  
+left:7em;  
+font-family: 'Grandstander', cursive; 
+font-size:1em;
+color:white;
+display:none;
 }
 
-.Lofi{
-display:none;    
+.genre_browse_icon{
+position:absolute;    
+left:1.2em;
+color:white;
+font-size:2em;
+display:none;
 }
-    
-    
-    
-</style>
-   
-        
+
+
+dashboard2{
+position:fixed; 
+width:5em;
+height:100vh;
+right:0; 
+top:2.4em;
+border-radius:1%;
+background-color:#f6bb42; 
+box-shadow: -2px 0px 3px 0px orange; 
+overflow-y:scroll;
+}
+
+
+info-txt{
+position:absolute;    
+font-family: 'Oswald', cursive; 
+font-size:1em; 
+color:black;  
+top:3.5em; 
+}
+
+
+@media screen and (orientation: landscape) {
+
+dashboard{
+height:82vh;    
+}
+
+
+#explore-txt{
+left:42vmax;    
+}
+
+#explore-icon{
+left:49vmax;    
+}
+
+}     
+     
+     
+     
+ </style>
+ 
+ 
     </head>
     
+    <body style="background-color:#f6bb42;" class="unselectable">
+    
+
+
+ 
+ 
+ 
+    
+  <home>  
     
     
-    
-    <body class="unselectable" style="background-image: linear-gradient(to right, #2ECC71 , #16A085);">
-
-<home>
-
-<acon class="footer-icon" style="right:0.8em; top:0.4em; color:white; display:none;" onclick="openSettings();">settings</acon>  
+<explore>
 
 
-<gT style="top:3em;">Hip-Hop</gT>
-        
-<genre class="scroll" style="top:7em;">
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/993877/pexels-photo-993877.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openLofi();">
+<txt id="explore-txt">Explore</txt>  
 
-<subT onclick="openLofi();" style="left:2em;">LO-FI</subT>
+<acon id="explore-icon" class="dash-icon">search</acon>
 
 
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/893961/pexels-photo-893961.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openAfro();">
 
-<subT onclick="openAfro();" style="left:9em;">AFROBEAT</subT>
+<img src="https://images.pexels.com/photos/462442/pexels-photo-462442.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:12em; left:2vw;" class="explore-img" onclick="openHip();">
 
 
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openMainHip();">
+<img src="https://images.pexels.com/photos/373992/pexels-photo-373992.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:12em; left:34.8vw;" class="explore-img" onclick="openTrap();">
 
-<subT onclick="openMainHip();" style="left:15.5em;">MAINSTREAM</subT>
+<img src="https://images.pexels.com/photos/71436/strings-silhouette-background-players-71436.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:12em; right:2vw;" class="explore-img" onclick="openPop();">
 
-<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
-    
-    
-    
-</genre>
 
+
+<div class="explore-div" style="top:20em; left:2vw" onclick="openHip();"></div>
+
+<div class="explore-div" style="top:20em; left:34.8vw" onclick="openTrap();"></div>
+
+<div class="explore-div" style="top:20em; right:2vw" onclick="openPop();"></div>
+
+
+
+
+<eTxt style="top:21em; left:6vw;" onclick="openHip();">Hip-Hop</eTxt>
+
+<eTxt style="top:21em; left:42.8vw;" onclick="openTrap();">Trap</eTxt>
+
+<eTxt style="top:21em; right:12vw;" onclick="openTrap();">Pop</eTxt>
 
 
 
 
 
+<img src="https://images.pexels.com/photos/1327430/pexels-photo-1327430.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:28em; left:2vw;" class="explore-img" onclick="openDub();">
+
+
+<img src="https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:28em; left:34.8vw;" class="explore-img" onclick="openHouse();">
+
+<img src="https://images.pexels.com/photos/952437/pexels-photo-952437.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:28em; right:2vw;" class="explore-img" onclick="openElec();">
 
 
 
-<gT style="top:17em;">Pop</gT>
-        
-<genre class="scroll" style="top:26em;">
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/1835016/pexels-photo-1835016.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openRnb();">
+<div class="explore-div" style="top:36em; left:2vw" onclick="openDub();"></div>
 
-<subT onclick="openRnb();" style="left:2em;">RNB</subT>
+<div class="explore-div" style="top:36em; left:34.8vw" onclick="openHouse();"></div>
 
-
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/4973905/pexels-photo-4973905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openWorld();">
-
-<subT onclick="openWorld();" style="left:9em;">WORLD</subT>
-
-
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openMainPop();">
-
-<subT onclick="openMainPop();" style="left:15.5em;">MAINSTREAM</subT>
-
-<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
-    
-    
-    
-</genre>
+<div class="explore-div" style="top:36em; right:2vw" onclick="openElec();"></div>
 
 
 
 
-<gT style="top:30em;">Electronic</gT>
-        
-<genre class="scroll" style="top:45em;">
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openHouse();">
+<eTxt style="top:37em; left:6vw;" onclick="openDub();">Dubstep</eTxt>
 
-<subT onclick="openHouse();" style="left:2em;">House</subT>
+<eTxt style="top:37em; left:42.8vw;" onclick="openHouse();">House</eTxt>
 
-
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/3052360/pexels-photo-3052360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openDub();">
-
-<subT onclick="openDub();" style="left:9em;">Dubstep</subT>
-
-
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/1267350/pexels-photo-1267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openElectro();">
-
-<subT onclick="openElectro();" style="left:15.5em;">Electronic</subT>
-
-<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
-    
-    
-    
-</genre>
+<eTxt style="top:37em; right:7vw;" onclick="openElec();">Electro</eTxt>
 
 
 
 
 
-<gT style="top:44em;">Others</gT>
-        
-<genre class="scroll" style="top:65em;">
-    
-<img class="g-imgs" src="https://images.pexels.com/photos/935959/pexels-photo-935959.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:0.4em;" onclick="openTrap();">
 
-<subT onclick="openLofi();" style="left:2em;">Trap</subT>
+
+
+
+<img src="https://images.pexels.com/photos/354304/pexels-photo-354304.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:44em; left:2vw;" class="explore-img" onclick="openRock();">
+
+
+<img src="https://images.pexels.com/photos/417473/pexels-photo-417473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:44em; left:34.8vw;" class="explore-img" onclick="openRhythm();">
+
+<img src="https://images.pexels.com/photos/34688/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="top:44em; right:2vw;" class="explore-img" onclick="openDance();">
+
+
+
+<div class="explore-div" style="top:52em; left:2vw" onclick="openRock();"></div>
+
+<div class="explore-div" style="top:52em; left:34.8vw" onclick="openRhythm();"></div>
+
+<div class="explore-div" style="top:52em; right:2vw" onclick="openDance();"></div>
+
+
+
+
+<eTxt style="top:53em; left:6vw;" onclick="openRock();">Rock</eTxt>
+
+<eTxt style="top:53em; left:42.8vw;" onclick="openRhythm();">Rhythm</eTxt>
+
+<eTxt style="top:53em; right:12vw;" onclick="openDance();">Dance</eTxt>
+
+
+<filler style="top:55em;"></filler>
 
 
     
-<img class="g-imgs" src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:15em;" onclick="openRock();">
+</explore>
 
-<subT onclick="openAfro();" style="left:9em;">Rock</subT>
 
+<app-info hidden>
+
+<info-txt>Loop store brings you free copyright music made with the Splash App Android. Here also you will find tutorials on how these beats/songs were made. 
+
+<br /><br />
+
+(i) Beats/Music you will find here are available for commercial or personal use royalty free.
+
+<br /><br />
+
+
+(ii) They CANNOT however be copyrighted as this will prevent others from using these beats/song as freely as they are meant to be used.
+
+<br /><br />
+
+(iii) You don't have to give credit for using these beats/songs but if you want to, all credit must be given to Splash App e.g. Splash is an amazing app that allows you to make beats in a couple of mins. Download Splash here + [link to playstore].
+
+<br /><br />
+
+(iv) Loop store is in no way affiliated with Splash or any of its partner. To put it simply,  you may consider this app a fan work (cause it's simply an amazing app).
+
+<br /><br />
+
+(v) Read Splash policies and terms of use here: <a href="https://splash.popgun.ai/legals">https://splash.popgun.ai/legals</a>
+
+<br /><br />
+
+(vi) Download Splash For Android: <a href="https://play.google.com/store/apps/details?id=ai.popgun.splashpad">https://play.google.com/store/apps/details?id=ai.popgun.splashpad</a>
+
+<br /><br />
+
+(vii) Email the developer: <a href="mailto: oconquestidam@gmail.com">oconquestidam@gmail.com</a>
+
+<br /><br />
+
+</info-txt>
 
     
-<img class="g-imgs" src="https://images.pexels.com/photos/3696395/pexels-photo-3696395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="left:29.5em;" onclick="openOthers();">
+    
+</app-info>
 
-<subT onclick="openMainHip();" style="left:15.5em;">Others</subT>
 
-<abox style="top:1em; left:41em; width:2em; height:2em; background-color:none;"></abox>
+
+
+
+<dashboard id="dash-one">
+
+<acon class="dash-icon" style="top:2em; right:1.2em;" onclick="openExplore();">headset</acon> 
+
+<dashTxt style="top:6.5em;">Explore</dashTxt> 
+
+
+
+<a href="https://www.youtube.com/playlist?list=PLepXDvoAE0k203uC7Xz3dh8dFbJgwU2m6"><acon class="dash-icon" style="top:7em; right:1.2em;">video_library</acon></a> 
+
+<dashTxt style="top:16.5em; right:0.6em;">Tutorial</dashTxt> 
+
+
+<a href="https://www.privacypolicies.com/generic"><acon class="dash-icon" style="top:12em; right:1.2em;">privacy_policy</acon></a>
+
+<dashTxt style="top:26.5em; right:1.5em;">Policy</dashTxt> 
+
+
+<acon class="dash-icon" style="top:17em; right:1.2em;" onclick="openAppInfo();">android</acon> 
+
+<dashTxt style="top:36.5em; right:0.6em;">App Info</dashTxt> 
+
+      
     
     
-    
-</genre>
+</dashboard>
 
+
+<app-header style="background-color:#f6bb42; box-shadow: 0 4px 2px -2px orange" id="hd-one">
+
+<fcon style=" top:0.4em; left:0.4em;" onclick="openDashboard();" class="dash-icon">dashboard</fcon>      
+    
+</app-header>
 
 </home>
 
 
+<genre-browse hidden>
+
+<dashboard2>
+
+<audio src="" id="audio" onended="onEnded();"></audio>
+
+<acon class="dash-icon" style="top:2em; right:1.2em;" onclick="backAudio();">replay_5</acon>   
+
+<dashTxt style="top:6.5em; right:1.2em;">Replay</dashTxt> 
+
+<acon class="dash-icon" style="top:7em; right:1.2em;" onclick="playAudio();" id="play-audio">play_circle_filled</acon>   
+
+<dashTxt style="top:16.5em; right:2em;" id="play-txt">Play</dashTxt> 
+ 
 
 
 
+<acon class="dash-icon" style="top:12em; right:1.2em;" onclick="skipAudio();">forward_5</acon> 
 
-<player hidden>
-
-
-
-<img id="player-header" src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-   
-<fcon id="exit-player" onclick="exitPlayer();">keyboard_backspace</fcon>
-
-<audio controls id="audio" src=""></audio>
-
-<player-gen-title>Rock</player-gen-title>
-
-<aud-title></aud-title>
-
-<a id="download-link" ><fcon id="download-icon">play_for_work</fcon></a>
+<dashTxt style="top:26.5em; right:1.1em;">Forward</dashTxt> 
 
 
-</player>
 
+<a id="download-link"><acon class="dash-icon" style="top:17em; right:1.2em;">play_for_work</acon></a>  
 
+<dashTxt style="top:36.5em; right:1em;">Download</dashTxt> 
+    
+    
+    
+</dashboard2>  
+
+<app-header style="background-color:#f6bb42; box-shadow: 0 4px 2px -2px orange" id="hd-two">
+
+<fcon style=" top:0.5em; left:0.4em;" onclick="closeGenre();" class="dash-icon">keyboard_backspace</fcon> 
+
+<gbT id="genre-browse-title">Hip-Hop(26)</gbT> 
+
+</app-header> 
+
+ 
+    
+    
+</genre-browse>
 
 
 
 <script>
 
-var pubCurrentGenre;
 
+var dashmode=0;
 
+var genmode;
 
+function openDashboard(){
 
-function openGenre(a,b,c){
+var dashone = document.getElementById("dash-one");
 
-window.scrollTo(0,0);
+switch (dashmode){
 
-var home= document.getElementsByTagName("home")[0].style.display="none";
+case 0 :  
 
-var player= document.getElementsByTagName("player")[0].style.display="block";
+dashone.style.display= "block";  
 
+dashmode++;
 
-document.getElementsByTagName("player-gen-title")[0].innerHTML=a;
+break;
 
-document.getElementById("player-header").src=b;
+case 1 :
 
+dashone.style.display= "none";  
 
-
-
-for(var x=0; document.getElementsByClassName(c).length > x; x++){
+dashmode--;  
  
-document.getElementsByClassName(c)[x].style.display="block";
+break;  
+    
+}
+
+
+}
+
+
+function openGen(xyz,zyx){
+
+var amount= document.getElementsByClassName(xyz + "box").length ;
+
+var cN= document.getElementsByClassName(xyz);
+
+document.getElementsByTagName("home")[0].style.display= "none";
+
+document.getElementsByTagName("dashboard")[0].style.display= "none";
+
+document.getElementsByTagName("genre-browse")[0].style.display= "block";
+
+for(var x=0; cN.length>x; x++){
+
+cN[x].style.display="block";  
+    
+}
+
+genmode = xyz;
+
+
+
+
+document.getElementById("genre-browse-title").innerHTML = zyx + "(" + amount + ")";
+   
+    
     
 }
 
 
 
-for(var y=0; document.getElementsByTagName("post-div").length > y; y++){
- 
-document.getElementsByTagName("post-div")[y].style.backgroundColor="#16A085";
+function openHip(){
 
-}
-
-
-
-for(var z=0; document.getElementsByClassName("post-icon").length > z; z++){
- 
-document.getElementsByClassName("post-icon")[z].innerHTML= "play_circle_outline";
-
-}
-
-document.getElementById("download-link").href= "#download-icon";
-
-document.getElementById("audio").src= "";
-    
-
-
-
-pubCurrentGenre=c;   
-    
-
-
-    
-}
-
-
-function openLofi(){
-
-openGenre("Lo-Fi","https://images.pexels.com/photos/993877/pexels-photo-993877.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Lofi");
-
-    
-}
-
-
-
-
-function openAfro(){
-
-openGenre("Afrobeats","https://images.pexels.com/photos/893961/pexels-photo-893961.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Afro");
-    
-}
-
-
-function openMainHip(){
-
-openGenre("Hip-Hop","https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Hip");
-    
-}
-
-
-
-function openRnb(){
-
-openGenre("Rhythm & Blues","https://images.pexels.com/photos/1835016/pexels-photo-1835016.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Rnb");
-    
-}
-
-
-
-function openWorld(){
-
-openGenre("World","https://images.pexels.com/photos/4973905/pexels-photo-4973905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","World");
-    
-
-}
-
-
-
-
-function openMainPop(){
-
-openGenre("Pop","https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Pop");
-    
-}
-
-
-
-function openHouse(){
-
-openGenre("House","https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","House");
-    
-}
-
-
-
-function openDub(){
-
-openGenre("Dubstep","https://images.pexels.com/photos/3052360/pexels-photo-3052360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Dub");
-    
-}
-
-
-
-function openElectro(){
-
-openGenre("Electro & Gaming","https://images.pexels.com/photos/1267350/pexels-photo-1267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Electro");
+openGen("Hip","Hip-Hop");
     
 }
 
 
 function openTrap(){
 
-openGenre("Trap","https://images.pexels.com/photos/935959/pexels-photo-935959.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Trap");
+openGen("Trap","Trap");
     
 }
 
+
+
+
+function openPop(){
+
+openGen("Pop","Pop");
+    
+}
+
+
+
+
+
+function openDub(){
+
+openGen("Dub","Dubstep");
+    
+}
+
+
+
+
+function openHouse(){
+
+openGen("House","House");
+    
+}
+
+
+function openElec(){
+
+openGen("Elec","Electronic");
+    
+}
 
 
 function openRock(){
 
-openGenre("Rock","https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Rock");
+openGen("Rock","Rock");
     
 }
 
 
 
-function openOthers(){
+function openRhythm(){
 
-openGenre("Rhythm & Dance...","https://images.pexels.com/photos/3696395/pexels-photo-3696395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500","Other");
+openGen("Rhythm","Ryhthm");
     
 }
 
-function exitPlayer(){
+
+function openDance(){
+
+openGen("Dance","Dance/Retro");
+    
+}
+
+
+function closeGenre(){
+
+var cN= document.getElementsByClassName(genmode);
+
+document.getElementsByTagName("genre-browse")[0].style.display= "none";
+
+document.getElementsByTagName("home")[0].style.display= "block";
+
+for(var x=0; cN.length>x; x++){
+
+cN[x].style.display="none";  
+    
+}
+
+
+
+
+    
+}
+
+
+
+function playAudio(){
+
+var iconcheck= document.getElementById("play-audio"); 
+
+var txtcheck= document.getElementById("play-txt"); 
+
+
+
+var audio= document.getElementById("audio");
+
+var audiocheck= document.getElementById("audio").paused;
+
+switch(audiocheck){
+
+case true:
+
+audio.play();
+
+iconcheck.innerHTML  = "pause_circle_filled";
+
+txtcheck.innerHTML = "pause"; 
+
+break;
+
+case false:
+
+audio.pause();
+
+iconcheck.innerHTML  = "play_circle_filled";
+
+txtcheck.innerHTML = "play";     
+    
+}    
+    
+    
+}
+
+
+function backAudio(){
+
+var audio= document.getElementById("audio");
+
+audio.currentTime-=5;    
+    
+}
+
+
+function skipAudio(){
+
+var audio= document.getElementById("audio");
+
+audio.currentTime+=5;    
+    
+}
+
+function onEnded(){
+
+var iconcheck= document.getElementById("play-audio"); 
+
+var txtcheck= document.getElementById("play-txt");
+
+iconcheck.innerHTML  = "stop";
+
+txtcheck.innerHTML = "Replay"; 
  
- var home= document.getElementsByTagName("home")[0].style.display="block";
-
-var player= document.getElementsByTagName("player")[0].style.display="none";  
 
 
-var audTitle= document.getElementsByTagName("aud-title")[0].innerHTML="";  
-
-
-for(var x=0; document.getElementsByClassName(pubCurrentGenre).length > x; x++){
- 
-document.getElementsByClassName(pubCurrentGenre)[x].style.display="none";
-    
-}
-
- 
-    
     
 }
 
 
 
-function post(postClass,postName,postAuthor,postSrc){
+
+
+
+
+
+function newPost(genre, gtitle, postSrc){
+
+var img= document.createElement("img");
+
+img.className= "genre_browse_img " + genre + " " + genre + "box"; 
+
+img.src="https://images.pexels.com/photos/4973905/pexels-photo-4973905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+
+img.style.top= 6 + (document.getElementsByClassName(genre + "box").length * 6) + "em";
+
+document.body.prepend(img);
+
+
+
+
+var title= document.createElement("aTxt");
+
+title.innerHTML= gtitle;
+
+title.className= genre + " genre_browse_title";
+
+title.style.top= 0.5 + (document.getElementsByClassName(genre + "box").length * 5) + "em";
+
+document.body.prepend(title);
+
+document.getElementsByTagName("genre-browse")[0].prepend(title);
+
+
+var author= document.createElement("aTxt");
+
+author.innerHTML= "splash app";
+
+author.className= genre + " genre_browse_author";
+
+author.style.top= 3 + (document.getElementsByClassName(genre + "box").length * 6) + "em";
+
+document.body.prepend(author);
+
+document.getElementsByTagName("genre-browse")[0].prepend(author);
+
+
 
 
 var icon= document.createElement("acon");
 
-icon.className= "post-icon " + postClass;
+icon.innerHTML= "play_circle_filled";
+
+icon.className= genre + " genre_browse_icon " + genre + "boxcon";
+
+icon.style.top= 3.7 + (document.getElementsByClassName(genre + "boxcon").length * 3) + "em";
+
+document.body.prepend(icon);
+
+document.getElementsByTagName("genre-browse")[0].prepend(icon);
 
 
-icon.innerHTML= "play_circle_outline";
+document.getElementsByTagName("genre-browse")[0].prepend(img);
 
-
-document.body.appendChild(icon);
-
-document.getElementsByTagName("player")[0].prepend(icon);
-
-
-
-
-
-
-
-var author= document.createElement("post-author");
-
-author.className= postClass;
-
-author.innerHTML= postAuthor;
-
-
-document.body.appendChild(author);
-
-document.getElementsByTagName("player")[0].prepend(author);
-
-
-
-
-var name= document.createElement("post-name");
-
-name.className= postClass;
-
-name.innerHTML= postName;
-
-name.style.top= 11 + (document.getElementsByTagName("post-name").length * 4.6) + "em";
-
-document.body.appendChild(name);
-
-document.getElementsByTagName("player")[0].prepend(name);
-
-
-
-var box= document.createElement("post-div");
-
-box.className= postClass + "box " + postClass;
-
-
-document.body.appendChild(box);
-
-document.getElementsByTagName("player")[0].prepend(box);
-
-
-box.style.top= 8 + (document.getElementsByClassName(postClass + "box").length * 7) + "em";
-
-icon.style.top= 7.6 + (document.getElementsByClassName(postClass + "box").length * 4.35) + "em";
-
-author.style.top= 12 + (document.getElementsByClassName(postClass + "box").length * 7) + "em";
-
-name.style.top= 6.4 + (document.getElementsByClassName(postClass + "box").length * 4.65) + "em";
-
-
-
-icon.style.display="none";
-
-box.style.display="none";
-
-author.style.display="none";
-
-name.style.display="none";    
 
 
 icon.onclick= function (){
 
 
-for(var x=0; document.getElementsByClassName("post-icon").length > x; x++){
- 
-document.getElementsByClassName("post-icon")[x].innerHTML= "play_circle_outline";
+var cN= document.getElementsByClassName("genre_browse_icon");
 
-icon.innerHTML= "stop";
-    
-}  
+for(var x=0; cN.length>x; x++){
 
+cN[x].innerHTML= "play_circle_filled";
 
-
-
-for(var y=0; document.getElementsByTagName("post-div").length > y; y++){
- 
-document.getElementsByTagName("post-div")[y].style.backgroundColor="#16A085";
-
-box.style.backgroundColor="#2ECC71";
+icon.innerHTML= "pause_circle_filled";
     
 }
 
-
-document.getElementsByTagName("aud-title")[0].innerHTML= postName;
 
 
 document.getElementById("audio").src= postSrc.substring(0, postSrc.length - 4) + "raw=1";
 
 document.getElementById("download-link").href= postSrc.substring(0, postSrc.length - 4) + "raw=1";
     
-    
-};
 
-
+playAudio();
 
 
 
 }
 
 
-function lofi(a,b,c){
-    
-post("Lofi",a,b,c); 
-    
-}
 
-
-
-function afro(a,b,c){
-    
-post("Afro",a,b,c); 
-    
-}
-
-
-
-function hip(a,b,c){
-    
-post("Hip",a,b,c); 
-    
-}
-
-    
-
-function rnb(a,b,c){
-    
-post("Rnb",a,b,c); 
-    
-}
-
-
-
-function world(a,b,c){
-    
-post("World",a,b,c); 
-    
-}
-
-
-function pop(a,b,c){
-    
-post("Pop",a,b,c); 
-    
-}
-
-
-
-function house(a,b,c){
-    
-post("House",a,b,c); 
-    
-}
-
-
-
-function dub(a,b,c){
-    
-post("Dub",a,b,c); 
-    
-}
-
-
-
-function elec(a,b,c){
-    
-post("Electro",a,b,c); 
-    
-}
-
-
-
-function trap(a,b,c){
-    
-post("Trap",a,b,c); 
-    
-}
-
-
-
-function rock(a,b,c){
-    
-post("Rock",a,b,c); 
-    
-}
-
-
-
-function other(a,b,c){
-    
-post("Other",a,b,c); 
     
 }
 
 
 
 
+function hip(a,b){
+
+newPost("Hip",a,b);   
+    
+}
+
+function trap(a,b){
+
+newPost("Trap",a,b);   
+    
+}
 
 
+function pop(a,b){
+
+newPost("Pop",a,b);   
+    
+}
+
+
+function dub(a,b){
+
+newPost("Dub",a,b);   
+    
+}
+
+
+function house(a,b){
+
+newPost("House",a,b);   
+    
+}
+
+
+function elec(a,b){
+
+newPost("Elec",a,b);   
+    
+}
+
+
+function rock(a,b){
+
+newPost("Rock",a,b);   
+    
+}
+
+
+function rhythm(a,b){
+
+newPost("Rhythm",a,b);   
+    
+}
+
+
+function dance(a,b){
+
+newPost("Dance",a,b);   
+    
+}
+
+
+function openExplore(){
+
+var info= document.getElementsByTagName("app-info")[0];
+
+var explore= document.getElementsByTagName("explore")[0];
+
+info.style.display="none";
+
+explore.style.display="block"; 
+
+document.getElementsByTagName("dashboard")[0].style.display= "none";
+    
+}
+
+
+function openAppInfo(){
+
+var info= document.getElementsByTagName("app-info")[0];
+
+var explore= document.getElementsByTagName("explore")[0];
+
+explore.style.display="none";
+
+info.style.display="block"; 
+
+document.getElementsByTagName("dashboard")[0].style.display= "none";
+    
+}
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
     
     
 </script>
+
+
+
 
 <script src="https://oconquest.github.io/BeatsJs/">
 
@@ -773,8 +896,5 @@ post("Other",a,b,c);
 
 
 
-
-
-    
     </body>
 </html>
